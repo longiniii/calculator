@@ -1,0 +1,178 @@
+:root {
+  --theme-primary: rgb(0, 0, 0);
+  --theme-secondary: rgb(32, 39, 49);
+  --theme-tertiary: rgb(251, 120, 69);
+  --theme-primary-inverse: white;
+  --theme-font-primary: white;
+  --theme-font-secondary: rgb(130, 139, 150);
+  --font-family-primary: "Exo 2", sans-serif ;
+}
+
+.dark-theme {
+  --theme-primary: rgb(0, 0, 0);
+  --theme-secondary: rgb(32, 39, 49);
+  --theme-tertiary: rgb(251, 120, 69);
+  --theme-primary-inverse: white;
+  --theme-font-primary: white;
+  --theme-font-secondary: rgb(130, 139, 150);
+  --font-family-primary: "Exo 2", sans-serif ;
+}
+
+.light-theme {
+  --theme-primary: rgb(255, 255, 255);
+  --theme-secondary: rgb(240, 240, 240);
+  --theme-tertiary: rgb(0, 120, 200);
+  --theme-primary-inverse: black;
+  --theme-font-primary: black;
+  --theme-font-secondary: rgb(70, 70, 70);
+  --font-family-primary: "Exo 2", sans-serif ;
+}
+
+.lemon-theme {
+  --theme-primary: rgb(238, 61, 90);
+  --theme-secondary: rgb(240, 240, 240);
+  --theme-tertiary: rgb(255, 179, 38);
+  --theme-primary-inverse: rgb(17, 194, 165);
+  --theme-font-primary: rgb(247, 14, 14);
+  --theme-font-secondary: rgb(130, 139, 150);
+  --font-family-primary: "Lemon", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family-primary);
+}
+
+::-webkit-scrollbar {
+  background-color: var(--theme-secondary);
+}
+
+::-webkit-scrollbar-button {
+  background-color: var(--theme-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--theme-tertiary);
+}
+
+html {
+  font-size: 12px;
+}
+
+body {
+  background-color: var(--theme-primary);
+}
+
+#calculator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44rem;
+  height: 480px;
+  display: flex;
+  flex-flow: column wrap;
+  border-radius: 15px;
+}
+#calculator #outputAndExpression {
+  flex: 1;
+  background-color: var(--theme-secondary);
+  display: flex;
+  max-width: 44rem;
+  overflow-x: auto;
+  flex-flow: column wrap;
+}
+#calculator #outputAndExpression #dExpression {
+  flex: 4;
+  padding-left: 1.6rem;
+}
+#calculator #outputAndExpression #dExpression #pExpression {
+  padding-top: 32px;
+  font-size: 1.75rem;
+  color: var(--theme-font-secondary);
+}
+#calculator #outputAndExpression #dOutput {
+  flex: 5;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+}
+#calculator #outputAndExpression #dOutput #pOutput {
+  overflow-x: auto;
+  padding-top: 4px;
+  font-size: 4.1rem;
+  color: var(--theme-font-primary);
+}
+#calculator #input {
+  flex: 2;
+  background-color: var(--theme-primary) !important;
+  padding: 1.8rem;
+  font-size: 1.3rem;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1.0833rem;
+  background-color: var(--theme-primary);
+}
+#calculator #input #inputBasic {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: repeat(1fr);
+  row-gap: 1.0833rem;
+  -moz-column-gap: 0.75rem;
+  column-gap: 0.75rem;
+}
+#calculator #input #inputBasic .dEachInput {
+  height: 100%;
+  width: 100%;
+}
+#calculator #input #inputBasic .dEachInput button {
+  height: 100%;
+  width: 100%;
+  background-color: var(--theme-secondary);
+  border: 1.5px solid var(--theme-primary) !important;
+  color: var(--theme-font-primary);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+#calculator #input #inputBasic .dEachInput button:active {
+  border: 1.5px solid var(--theme-font-primary) !important;
+}
+#calculator #input #inputBasic #dEquality {
+  grid-column-end: span 2;
+}
+#calculator #input #inputBasic #dEquality #btnEquality {
+  background-color: var(--theme-tertiary) !important;
+}
+#calculator #input #inputAdvanced {
+  display: none;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: repeat(1fr);
+  row-gap: 1.0833rem;
+  -moz-column-gap: 0.75rem;
+  column-gap: 0.75rem;
+}
+#calculator #input #inputAdvanced .dEachInput {
+  height: 100%;
+  width: 100%;
+}
+#calculator #input #inputAdvanced .dEachInput button {
+  height: 100%;
+  width: 100%;
+  background-color: var(--theme-secondary);
+  border: 1.5px solid var(--theme-primary) !important;
+  color: var(--theme-font-primary);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+#calculator #input #inputAdvanced .dEachInput button:active {
+  border: 1.5px solid var(--theme-font-primary) !important;
+}/*# sourceMappingURL=style.css.map */
